@@ -1,28 +1,17 @@
-# AdapterPattern
+#Integrating Different School Systems into a Unified School Management Application
+You are developing a school management application that helps administrators manage various school systems such as attendance, grading, and library management. Each system has different interfaces and methods. To ensure compatibility and seamless integration, you need to create adapters for different systems to allow them to connect to the unified school management application.
 
-This project demonstrates the Adapter pattern in a school-management context.
+Adaptee Objects:
+AttendanceSystem - Represents an attendance tracking system that needs to be integrated. It has the markAttendance() method.
+GradingSystem - Represents a grading system that requires integration. It has the recordGrades() method.
+LibrarySystem - Represents a library management system that needs to be integrated. It has the manageBooks() method.
+Target Object:
+SchoolManagementApp - Represents a unified school management application with a common interface for integrating systems. It defines the integrateSystem() method as the target method.
+Adapter Objects:
+AttendanceSystemAdapter - An adapter for integrating the attendance system into the school management application. It adapts the AttendanceSystem to the SchoolManagementApp interface, translating integrateSystem() to markAttendance().
+GradingSystemAdapter - An adapter for integrating the grading system into the school management application. It adapts the GradingSystem to the SchoolManagementApp interface, translating integrateSystem() to recordGrades().
+LibrarySystemAdapter - An adapter for integrating the library management system into the school management application. It adapts the LibrarySystem to the SchoolManagementApp interface, translating integrateSystem() to manageBooks().
+In your solution you must provide the following in your Github link account:
 
-## Scenario
-
-A unified school management application exposes a common interface, `SchoolManagementApp`, which requires a single method:
-
-- `integrateSystem()`
-
-Different school subsystems use incompatible interfaces:
-
-- `AttendanceSystem.markAttendance()`
-- `GradingSystem.recordGrades()`
-- `LibrarySystem.manageBooks()`
-
-Each system is adapted through a dedicated adapter class so it can plug into the same application interface seamlessly.
-
-## Classes
-
-- `SchoolManagementApp` - target interface
-- `AttendanceSystemAdapter` - adapts attendance to the school app
-- `GradingSystemAdapter` - adapts grading to the school app
-- `LibrarySystemAdapter` - adapts library management to the school app
-
-## Verification
-
-The project includes a focused test class that verifies each adapter triggers the correct underlying system action.
+  Problem statement (description of the problem. Just copy what is stated here.
+  Uploaded java codes for the solution.
